@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 from utils import pytorch_utils, audio_utils
 
-ACCEPTED_AUDIO_EXTENSIONS = (".wav", ".mp3", ".flac", ".ogg")
+ACCEPTED_AUDIO_EXTENSIONS = (".wav", ".mp3", ".flac", ".ogg", ".m4a", ".aac", ".mp4", ".opus")
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--checkpoint", type=str, required=True)

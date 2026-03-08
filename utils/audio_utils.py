@@ -9,11 +9,10 @@ import warnings
 
 
 def get_backend(filename):
-    if filename.lower().endswith(".mp3"):
-        backend = "ffmpeg"
-    else:
-        backend = "soundfile"
-    return backend
+    # Always use ffmpeg for maximum compatibility
+    # ffmpeg can auto-detect actual audio format regardless of file extension
+    # This handles cases where file extension doesn't match actual format
+    return "ffmpeg"
 
 
 def get_info(filename, backend=None):
